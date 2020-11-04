@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<h1>Formulario Gestionar Persona</h1>
+	<h:form>
+		<h:panelGrid columns="2" border="2">
+			<h:outputLabel value="Id" for="id"/>
+			<h:inputText value="#{personaBean.id}" id="id" style="width:350px"/>
+			<h:outputLabel value="Nombres" for="nombres"/>
+			<h:inputText value="#{personaBean.nombres}" id="nombres" style="width:350px"/>
+			<h:outputLabel value="Apellidos" for="apellidos"/>
+			<h:inputText value="#{personaBean.apellidos}" id="apellidos" style="width:350px"/>
+			<h:outputLabel value="Cedula" for="cedula"/>
+			<h:inputText value="#{personaBean.cedula}" id="cedula" style="width:350px"/>
+			<h:outputLabel value="Genero" for="genero"/>
+			<h:selectOneRadio value="#{personaBean.genero}" id="genero">
+				<f:selectItem itemValue="M" itemLabel="Masculino"/>
+				<f:selectItem itemValue="F" itemLabel="Femenino"/>
+			</h:selectOneRadio>			
+			<h:outputLabel value="Edad" for="edad"/>
+			<h:inputText value="#{personaBean.edad}" id="edad" style="width:350px"/>
+		</h:panelGrid>
+		
+		<br></br>
+		<h:commandButton action="Datos" value="Consultar" style="width:350px"/>
+		<br></br>
+		<h:commandButton action="Datos" value="Modificar" style="width:350px"/>
+		<br></br>
+		<h:commandButton action="Datos" value="Borrar" style="width:350px"/>
+		<br></br>
+		<h:commandButton action="index" value="Regresar" style="width:350px"/>
+	</h:form>
+</body> 
+</html>
